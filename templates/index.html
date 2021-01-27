@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1> {% block title %} Willkommen bei DonaldBlog {% endblock %}</h1>
+    {% for post in posts %}
+    <a href="{{ url_for('post', post_id=post['id']) }}">
+        <h2>{{ post['title'] }}</h2>
+    </a>
+    <form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+        <input type="submit" value="Delete Post"
+                class="btn btn-danger btn-sm"
+                onclick="return confirm('Bist du sicher, dass du diesen Post löschen willst?')">
+    </form>
+    <a href="{{ url_for('edit', id=post['id']) }}">
+        <span class="badge badge-warning">Edit</span>
+    </a>
+
+    <span class="badge badge-primary">{{ post['created'] }}</span>
+   
+    <hr>
+    {% endfor %}
+{% endblock %}

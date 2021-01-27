@@ -1,0 +1,2 @@
+Flack ist eine kleines und schlankes Python-Web-Framework mit nützlichen Tools und Funktionen, die das Erstellen von Anwendungen in Python erleichtern.
+Bootstrap wird Ihnen helfen, responsive Webseiten in Ihre Webanwendung zu integrieren, sodass sie problemlos auch mit mobilen Browsern funktioniert, ohne dass Sie dafür eigenen HTML-, CSS- und JavaScript-Code schreiben müssen.
